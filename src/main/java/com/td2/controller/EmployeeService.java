@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.td2.entities.Employee;
 import com.td2.repositories.EmployeeRepository;
 
 
@@ -17,15 +18,15 @@ public class EmployeeService {
 	private EmployeeRepository repo;
 	
 	//Create /update
-	public void save(User user) {
-		repo.save(user);
+	public void save(Employee employee) {
+		repo.save(employee);
 	}
 	//Read
-		public List<User> listAll() {
-			return repo.findAll();
+		public List<Employee> listAll() {
+			return (List<Employee>) repo.findAll();
 		}
 	//find byID
-	public User get(long id) {
+	public Employee get(long id) {
 		return repo.findById(id).get();
 	}
 	//delete ByID
