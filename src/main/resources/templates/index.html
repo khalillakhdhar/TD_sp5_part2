@@ -22,12 +22,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="product : ${listProducts}">
+            <tr th:each="product : listEmployees">
             	<td th:text="${product.id}">id</td>
-                <td th:text="${product.titre}">titre</td>
-                <td th:text="${product.quantite}">quantité</td>
-                <td th:text="${product.pays}">Pays</td>
-                <td th:text="${product.prix}">Prix</td>
+                <td th:text="${product.nom}">nom</td>
+                <td th:text="${product.prenom}">prenom</td>
+                <td th:text="${product.age}">age</td>
+                <td th:text="${product.grade}">grade</td>
                 <td>
                 	<a th:href="@{'/edit/' + ${product.id}}">Edit</a>
                 	&nbsp;&nbsp;&nbsp;
