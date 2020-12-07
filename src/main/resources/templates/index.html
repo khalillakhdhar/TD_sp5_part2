@@ -13,21 +13,26 @@
     <table border="1" cellpadding="10">
         <thead>
             <tr>
-                <th>employee ID</th>
+                
                 <th>nom</th>
                 <th>prenom</th>
+                                <th>email</th>
+                   <th>tel</th>
                 <th>age</th>
                 <th>grade</th>
+                <th>Adresse</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr th:each="employee : listEmployees">
-            	<td th:text="${employee.id}">id</td>
+            <tr th:each="employee : ${listEmployees}">
                 <td th:text="${employee.nom}">nom</td>
                 <td th:text="${employee.prenom}">prenom</td>
+                <td th:text="${employee.email}">email</td>
+                <td th:text="${employee.email}">email</td>
                 <td th:text="${employee.age}">age</td>
                 <td th:text="${employee.grade}">grade</td>
+                <td> <td th:text="${employee.adresse}">adresse</td>
                 <td>
                 	<a th:href="@{'/edit/' + ${employee.id}}">Modifier</a>
                 	&nbsp;&nbsp;&nbsp;
