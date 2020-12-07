@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.td2.entities.Employee;
 
-public interface EmployeeIRepository extends CrudRepository<Employee,Long> {
+public interface EmployeeRepository extends CrudRepository<Employee,Long> {
 
 }
