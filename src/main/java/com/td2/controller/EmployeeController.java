@@ -44,7 +44,7 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping("/edit/{id}")
-	public ModelAndView showEditEmployeePage(@PathVariable(name = "id") int id) {
+	public ModelAndView showEditEmployeePage(@PathVariable(name = "id") long id) {
 		ModelAndView mav = new ModelAndView("edit_employee");
 		Employee employee = service.get(id);
 		mav.addObject("employee", employee);
@@ -53,7 +53,7 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping("/delete/{id}")
-	public String deleteEmployee(@PathVariable(name = "id") int id) {
+	public String deleteEmployee(@PathVariable(name = "id") long id) {
 		service.delete(id);
 		return "redirect:/";	// retourner à la page racine	
 	}
