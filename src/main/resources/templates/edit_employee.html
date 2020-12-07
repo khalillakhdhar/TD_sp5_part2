@@ -14,9 +14,8 @@
 
 			<table border="0" cellpadding="10">
 			<tr><td> ID:</td>
-					<td>
-						<input type="text" th:field="*{id}" readonly="readonly" />
-					</td></tr>
+								<td><input type="text" th:field="*{nom}" /></td>
+			</tr>
 				<tr>
 					<td>nom:</td>
 					<td><input type="text" th:field="*{nom}" /></td>
@@ -26,12 +25,16 @@
 					<td><input type="text" th:field="*{prenom}" /></td>
 				</tr>
 				<tr>
-					<td>age:</td>
-					<td><input type="number" min="1" th:field="*{age}" /></td>
-				</tr>
-				<tr>
 					<td>Email:</td>
 					<td><input type="text" th:field="*{email}" /></td>
+				</tr>
+					<tr>
+					<td>telephone:</td>
+					<td><input type="text" th:field="*{telephone}" /></td>
+				</tr>
+				<tr>
+					<td>age:</td>
+					<td><input type="number" min="1" th:field="*{age}" /></td>
 				</tr>
 				<tr>
 					<td>grade:</td>
@@ -42,7 +45,7 @@
 					<td><textarea th:field="*{adresse}" ></textarea></td>
 				</tr>							
 				<tr>
-					<td colspan="2"><button type="submit">Ajouter</button> </td>
+					<td colspan="2"><button type="submit">Modifier</button> </td>
 				</tr>
 				
 			</table>
