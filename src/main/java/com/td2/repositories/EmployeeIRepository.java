@@ -1,5 +1,7 @@
 package com.td2.repositories;
 
-public interface EmployeeIRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface EmployeeIRepository extends CrudRepository<Employee,Long> {
 
 }
